@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>A 1500 blitz rating is below the middle on Lichess: what 345,715 players show</title><link rel="canonical" href="https://georgelichess.com/chess-rating-percentiles"></head><body><main>
+<h1>A 1500 blitz rating is below the middle on Lichess: what 345,715 players show</h1>
+<p>By George Li</p>
+<p>On 1 September 2026, 345,715 accounts played at least one rated blitz game on Lichess. Each account is counted once, at its rating after its last game that day, and grouped the ratings into 25-point steps. The same count exists for bullet, rapid and classical. This post reads the data and answers one plain question: where does a given rating sit?</p>
+<h2>The middle is higher than 1500 in blitz</h2>
+<p>The median blitz rating that day was 1530. Half of the 345,715 accounts sat below it. A rating of 1500 therefore sits at percentile 46.8 in blitz: 46.8 percent of players were rated lower, and the rest were rated 1500 or higher.</p>
+<p>The medians differ by time control:</p>
+<table>
+<tr><th>Time control</th><th>Players counted</th><th>Median rating</th></tr>
+<tr><td>Bullet</td><td>169,583</td><td>1640</td></tr>
+<tr><td>Blitz</td><td>345,715</td><td>1530</td></tr>
+<tr><td>Rapid</td><td>201,221</td><td>1445</td></tr>
+<tr><td>Classical</td><td>12,241</td><td>1560</td></tr>
+</table>
+<p>Rapid has the lowest median, 1445, and bullet the highest, 1640. A player who is &quot;average&quot; in rapid and the same player in bullet are not on the same number, so a rating only means something next to its own time control.</p>
+<h2>Percentile by rating</h2>
+<p>This is the table most people want. Each cell is the share of players rated below that number.</p>
+<table>
+<tr><th>Rating</th><th>Bullet</th><th>Blitz</th><th>Rapid</th><th>Classical</th></tr>
+<tr><td>1000</td><td>6.4%</td><td>8.4%</td><td>13.1%</td><td>3.8%</td></tr>
+<tr><td>1200</td><td>16.5%</td><td>20.5%</td><td>27.4%</td><td>13.6%</td></tr>
+<tr><td>1500</td><td>38.1%</td><td>46.8%</td><td>55.3%</td><td>42.2%</td></tr>
+<tr><td>1800</td><td>63.4%</td><td>75.4%</td><td>82.8%</td><td>79.6%</td></tr>
+<tr><td>2000</td><td>78.7%</td><td>89.3%</td><td>94.1%</td><td>94.0%</td></tr>
+<tr><td>2200</td><td>90.1%</td><td>96.6%</td><td>98.6%</td><td>98.8%</td></tr>
+</table>
+<p>A 1500 sits at percentile 42.2 in classical, 55.3 in rapid and 38.1 in bullet. The same number is a stronger result in one pool than another.</p>
+<h2>The pile-up at 1500</h2>
+<p>In blitz, rapid and classical, the busiest 25-point step is 1500 to 1524. It holds 2.53 percent of blitz players, 2.55 percent of rapid players and 3.53 percent of classical players. Lichess starts a new account at 1500, and the games file does not mark provisional ratings, so newcomers add players at that step.</p>
+<p>Bullet does not show the pile-up. Its busiest step is 1700 to 1725, with 2.23 percent of players, and its 1500 step holds 2.16 percent.</p>
+<h2>How many players are strong</h2>
+<p>The top of the distribution is thin, and it thins at different speeds.</p>
+<table>
+<tr><th>Rating</th><th>Bullet</th><th>Blitz</th><th>Rapid</th><th>Classical</th></tr>
+<tr><td>2000 or higher</td><td>21.3%</td><td>10.7%</td><td>5.9%</td><td>6.0%</td></tr>
+<tr><td>2200 or higher</td><td>9.9%</td><td>3.4%</td><td>1.4%</td><td>1.2%</td></tr>
+</table>
+<p>About 21.3 percent of bullet players are rated 2000 or higher, against 10.7 percent in blitz. One reason is volume: that day, bullet accounts played 6.3 games each on average, blitz accounts 4.0 and classical accounts 1.4. Frequent players are more likely to appear in a one-day count.</p>
+<h2>The pools are different sizes</h2>
+<p>345,715 accounts played rated blitz that day and 12,241 played rated classical, so blitz had 28.2 times as many players. Percentiles from the classical pool rest on a much smaller group, so they depend more on who happened to play that day. Compare time controls with that in mind.</p>
+<p>Moving up is steep. In blitz, going from 1500 to 1800 takes a player from percentile 46.8 to 75.4, and going on to 2000 takes the player to 89.3. The first 300 points pass 28.6 percentage points of the field. The next 200 pass only 13.9, because fewer players are there to pass.</p>
+<h2>What this does not say</h2>
+<ul>
+<li>It is one day. Another month will look different.</li>
+<li>It counts accounts that played a rated game that day, not every Lichess account and not all chess players.</li>
+<li>Lichess ratings are their own scale. They are not FIDE, US Chess or chess.com ratings, and the data has no conversion and no federation breakdown.</li>
+<li>Bot accounts are excluded, and accounts rated below 400 or at 3200 and above are not in the counts.</li>
+</ul>
+<p>The counts come from the Lichess open database, which is released under CC0. The compiled tables are free to reuse under CC BY 4.0: five time controls, 112 rating steps each, with the percentages already worked out.</p>
+<p>The full data and method: <a href="https://georgelichess.com/chess-rating-percentiles">https://georgelichess.com/chess-rating-percentiles</a></p>
+
+</main></body></html>
