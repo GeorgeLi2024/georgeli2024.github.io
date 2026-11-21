@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>How wide should the small blind shove? Heads-up push or fold from 1 to 20 big blinds</title><link rel="canonical" href="https://georgelipoker.com/push-fold"></head><body><main>
+<h1>How wide should the small blind shove? Heads-up push or fold from 1 to 20 big blinds</h1>
+<p>By George Li</p>
+<p>When the effective stack gets short, poker simplifies. Heads-up with 20 big blinds or fewer, a common simplification lets the small blind shove all in or fold, and the big blind call or fold. That two-action game is solved here for every starting hand at every stack from 1 to 20 big blinds in half steps: 39 stack sizes by 169 hand classes, 6,591 rows in all. This post reads the solution.</p>
+<p>The setup: small blind 0.5, big blind 1, no ante, chips only. Strategies come from fictitious play, then the hands on the edge are made exactly indifferent. At every stack the pair of strategies is within 0.001 big blinds per hand of a perfect equilibrium.</p>
+<h2>The shoving range shrinks as the stack grows</h2>
+<p>Here is the share of all 1,326 starting hands the small blind shoves, and the share the big blind calls a shove with, at nine stack sizes.</p>
+<table>
+<tr><th>Effective stack</th><th>Small blind shoves</th><th>Big blind calls</th></tr>
+<tr><td>1 big blind</td><td>100.0%</td><td>100.0%</td></tr>
+<tr><td>2</td><td>89.4%</td><td>100.0%</td></tr>
+<tr><td>3</td><td>78.0%</td><td>92.3%</td></tr>
+<tr><td>5</td><td>71.5%</td><td>62.1%</td></tr>
+<tr><td>8</td><td>61.9%</td><td>45.0%</td></tr>
+<tr><td>10</td><td>58.3%</td><td>37.4%</td></tr>
+<tr><td>12</td><td>53.2%</td><td>33.0%</td></tr>
+<tr><td>15</td><td>45.7%</td><td>28.5%</td></tr>
+<tr><td>20</td><td>40.2%</td><td>21.7%</td></tr>
+</table>
+<p>At one big blind, both players play every hand. At five big blinds the small blind still shoves 71.5 percent of hands, and at ten it shoves 58.3 percent. By twenty big blinds the range is 40.2 percent.</p>
+<p>The big blind&#x27;s calling range falls faster: from 92.3 percent at three big blinds to 37.4 percent at ten and 21.7 percent at twenty. One reason is the price. A deeper stack means a bigger call into the same starting pot, and a hand needs more equity to pay for it.</p>
+<h2>Shoving is wider than calling</h2>
+<p>From 4.5 big blinds up, at every stack, the small blind shoves more hands than the big blind calls. Below that, the big blind calls at least as many hands, and more at 2 and 3 big blinds. One reason for the shove-wide pattern at depth: when the big blind folds, the small blind wins the pot with no showdown, so shoving earns something even with a hand that would lose a call. At ten big blinds the small blind shoves 58.3 percent of hands while the big blind calls 37.4 percent.</p>
+<h2>Some hands, at some stacks</h2>
+<table>
+<tr><th>Hand</th><th>Shoves at 10 bb</th><th>Shoves at 15 bb</th><th>Shoves at 20 bb</th></tr>
+<tr><td>72 offsuit</td><td>0%</td><td>0%</td><td>0%</td></tr>
+<tr><td>J9 offsuit</td><td>100%</td><td>100%</td><td>100%</td></tr>
+<tr><td>A2 offsuit</td><td>100%</td><td>100%</td><td>100%</td></tr>
+<tr><td>K2 suited</td><td>100%</td><td>100%</td><td>0%</td></tr>
+<tr><td>22</td><td>100%</td><td>100%</td><td>100%</td></tr>
+</table>
+<p>Seven-deuce offsuit is a fold at ten, fifteen and twenty big blinds. Jack-nine offsuit, ace-deuce offsuit and deuces always shove at all three, even at twenty big blinds. King-deuce suited is a shove at ten and fifteen big blinds and a fold at twenty. At ten big blinds, shoving seven-deuce would be worth -0.99 big blinds to the small blind, against -0.5 for folding.</p>
+<p>For the big blind facing a shove, the calls change with the stack:</p>
+<table>
+<tr><th>Hand</th><th>Calls at 5 bb</th><th>Calls at 10 bb</th><th>Calls at 20 bb</th></tr>
+<tr><td>AK offsuit</td><td>100%</td><td>100%</td><td>100%</td></tr>
+<tr><td>A9 offsuit</td><td>100%</td><td>100%</td><td>100%</td></tr>
+<tr><td>K9 offsuit</td><td>100%</td><td>100%</td><td>0%</td></tr>
+<tr><td>22</td><td>100%</td><td>100%</td><td>0%</td></tr>
+<tr><td>76 suited</td><td>100%</td><td>0%</td><td>0%</td></tr>
+</table>
+<p>Seven-six suited is a call at five big blinds and a fold at ten. Pocket deuces call at ten and fold at twenty.</p>
+<h2>Almost no mixing</h2>
+<p>A mixed strategy shoves a hand part of the time. It appears only on the edge, where a hand is exactly indifferent. At 20 big blinds, 168 of the 169 classes are pure shoves or folds and 1 is mixed. At 10 big blinds, 1 class is mixed. At no stack in the table are more than 2 classes mixed, and 12 of the 39 stacks have none. In practice, this chart is a list of hands, not a set of dice rolls.</p>
+<h2>What this does not tell you</h2>
+<ul>
+<li>It is a chip-EV solution to a two-action game. Real play has raises, antes, more players and tournament payouts (ICM), and the right play there differs.</li>
+<li>Effective stacks outside 1 to 20 big blinds are not covered.</li>
+<li>The strategies are rounded to four decimals, and every figure is computed from the rounded strategies.</li>
+</ul>
+<p>All 6,591 rows, with the value of acting and the equity behind it, plus the script that rebuilds them, are free to reuse under CC BY 4.0.</p>
+<p>The full data and method: <a href="https://georgelipoker.com/push-fold">https://georgelipoker.com/push-fold</a></p>
+
+</main></body></html>
