@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Preflop poker equity, computed exactly: 28,561 hand matchups in one table</title><link rel="canonical" href="https://georgelipoker.com/equity"></head><body><main>
+<h1>Preflop poker equity, computed exactly: 28,561 hand matchups in one table</h1>
+<p>By George Li</p>
+<p>Poker lore calls ace-king against a pair of queens a coin flip. How close is that, and how do other famous matchups fare? The answer is computed for every pair of starting hands, with no sampling: each matchup is played against all 1,712,304 five-card boards. The result is a table of 28,561 rows, one for each hero hand against each villain hand, using the 169 starting-hand classes (pairs, suited hands and offsuit hands).</p>
+<h2>The famous matchups, exactly</h2>
+<table>
+<tr><th>Hero</th><th>Villain</th><th>Hero wins</th><th>Tie</th><th>Hero equity</th></tr>
+<tr><td>AA</td><td>KK</td><td>81.7%</td><td>0.5%</td><td>81.9%</td></tr>
+<tr><td>KK</td><td>AKs</td><td>65.5%</td><td>0.8%</td><td>65.9%</td></tr>
+<tr><td>QQ</td><td>AKo</td><td>56.5%</td><td>0.4%</td><td>56.8%</td></tr>
+<tr><td>AKs</td><td>QQ</td><td>45.8%</td><td>0.4%</td><td>46.0%</td></tr>
+<tr><td>88</td><td>AKo</td><td>55.0%</td><td>0.4%</td><td>55.2%</td></tr>
+<tr><td>AKo</td><td>AQo</td><td>72.1%</td><td>4.7%</td><td>74.4%</td></tr>
+<tr><td>AA</td><td>72o</td><td>88.0%</td><td>0.4%</td><td>88.2%</td></tr>
+</table>
+<p>Equity is the hero&#x27;s win chance plus half the tie chance, which is the hero&#x27;s average share of the pot.</p>
+<p>Ace-king offsuit against queens is an underdog, not a coin flip: 43.2 percent for the ace-king, and the suited version does a little better at 46.0 percent. The pair is the favorite, but by about 57 to 43, not by a landslide.</p>
+<p>Dominated hands are where the edge is large. Ace-king against ace-queen wins 72.1 percent and ties 4.7 percent of the time, because the two hands share an ace and ace-king has the better kicker. Ace-ace against king-king wins 81.7 percent. Even aces against seven-deuce offsuit lose 11.6 percent of the time.</p>
+<p>Small pairs and suited connectors hold up against big cards. Pocket deuces, the weakest pair, are a favorite against ace-king offsuit at 52.6 percent. A suited connector, seven-six suited, has 38.9 percent against ace-king suited, and jack-ten suited has 38.0 percent. Two big cards are an underdog against a small pair, but not by much, which is why these matchups are called races.</p>
+<h2>How strong is each hand against a random one?</h2>
+<p>The second file in the data ranks all 169 classes by their equity against a random hand. Pocket aces are first at 85.2 percent and kings second at 82.4 percent. The weakest class is 32o, at 32.3 percent. 89 of the 169 classes are favorites against a random hand, and together they cover 654 of the 1,326 two-card combinations.</p>
+<p>The strongest ten classes are AA, KK, QQ, JJ, TT, 99, 88, AKs, 77, AQs. They account for 56 combinations, which is 4.2 percent of all starting hands. The top twenty classes cover 130 combinations, 9.8 percent of hands.</p>
+<p>All thirteen pocket pairs together are 78 combinations, 5.9 percent of starting hands. There are 312 suited combinations and 936 offsuit ones.</p>
+<h2>Does suitedness matter?</h2>
+<p>Ace-king suited ranks number 8 and the offsuit version number 12. Against a random hand the suited hand has 67.0 percent equity and the offsuit hand 65.3 percent: the suit is worth 1.7 points. A small edge, not a transformation, and a reminder that a rank in a chart is a summary of many boards.</p>
+<h2>What this does not tell you</h2>
+<ul>
+<li>These are all-in preflop equities. Both hands are fixed and five cards come with no betting. They say nothing about how a hand plays after the flop.</li>
+<li>A class like AKo stands for twelve specific hands. The numbers average over all of them, and individual hands can differ slightly when suits overlap.</li>
+<li>Values are rounded to 5 decimals.</li>
+</ul>
+<h2>Method in two lines</h2>
+<p>Each cell averages every pair of specific hands that share no card, and each pair is run against all 1,712,304 five-card boards that can come from the 48 unseen cards. All 14,365 distinct class pairs are enumerated exactly. The table, the ranking and a reproducible script are free to reuse under CC BY 4.0.</p>
+<p>The full data and method: <a href="https://georgelipoker.com/equity">https://georgelipoker.com/equity</a></p>
+
+</main></body></html>
