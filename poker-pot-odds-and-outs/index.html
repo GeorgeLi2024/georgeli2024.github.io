@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>How good is the rule of 4 and 2? Exact draw odds against the shortcut</title><link rel="canonical" href="https://georgelipoker.com/pot-odds"></head><body><main>
+<h1>How good is the rule of 4 and 2? Exact draw odds against the shortcut</h1>
+<p>By George Li</p>
+<p>Poker players count outs and multiply: by 4 on the flop, by 2 on the turn. The shortcut estimates the chance to hit a draw by the river. How good is it? The exact chance is worked out here for 1 to 20 outs on both streets and compared. The tables also show how much equity a call needs against twelve bet sizes. Everything here is arithmetic, so there is nothing to sample.</p>
+<h2>Pot odds: the equity a call needs</h2>
+<p>A bet of f times the pot, called in full, costs the caller f to win a pot of 1 + 2f. The break-even equity is f / (1 + 2f).</p>
+<table>
+<tr><th>Bet size</th><th>Equity needed</th></tr>
+<tr><td>Quarter pot</td><td>16.7%</td></tr>
+<tr><td>Third of the pot</td><td>20.0%</td></tr>
+<tr><td>Half pot</td><td>25.0%</td></tr>
+<tr><td>Two thirds</td><td>28.6%</td></tr>
+<tr><td>Three quarters</td><td>30.0%</td></tr>
+<tr><td>Pot-size bet</td><td>33.3%</td></tr>
+<tr><td>Two times the pot</td><td>40.0%</td></tr>
+<tr><td>Three times the pot</td><td>42.9%</td></tr>
+<tr><td>Four times the pot</td><td>44.4%</td></tr>
+</table>
+<p>A third-pot bet needs exactly 20 percent. A pot-sized bet needs one third. Even a bet of four times the pot needs only 44.4 percent: the required equity never reaches 50 percent however large the bet, because the ratio f / (1 + 2f) approaches one half and never gets there.</p>
+<h2>The rule of 4 on the flop</h2>
+<p>With k outs on the flop, the exact chance to hit by the river is one minus the chance both remaining cards miss. Four times k is the shortcut.</p>
+<table>
+<tr><th>Outs</th><th>Exact</th><th>Rule of 4</th><th>Rule minus exact</th></tr>
+<tr><td>1</td><td>4.3%</td><td>4%</td><td>-0.3</td></tr>
+<tr><td>4</td><td>16.5%</td><td>16%</td><td>-0.5</td></tr>
+<tr><td>8</td><td>31.5%</td><td>32%</td><td>0.5</td></tr>
+<tr><td>9</td><td>35.0%</td><td>36%</td><td>1.0</td></tr>
+<tr><td>12</td><td>45.0%</td><td>48%</td><td>3.0</td></tr>
+<tr><td>15</td><td>54.1%</td><td>60%</td><td>5.9</td></tr>
+<tr><td>20</td><td>67.5%</td><td>80%</td><td>12.5</td></tr>
+</table>
+<p>For 1 through 8 outs, the rule is within one percentage point of the exact figure: that covers an open-ended straight draw with 8 outs, which is 31.5 percent against the rule&#x27;s 32. A flush draw, with 9 outs, is 35.0 percent and the rule says 36, one point too high.</p>
+<p>From 7 outs on, the rule overstates, and past 8 outs the error grows fast. At 12 outs it is 3.0 points high, at 15 outs 5.9 points and at 20 outs 12.5 points: the exact chance is 67.5 percent and the rule says 80. The rule overstates for 14 of the 20 out counts, understates for 6 (all of them 6 or fewer outs).</p>
+<h2>The rule of 2 on the turn</h2>
+<p>With one card to come, the exact chance is simply outs divided by 46. The rule of 2 doubles the outs.</p>
+<table>
+<tr><th>Outs</th><th>Exact</th><th>Rule of 2</th><th>Rule minus exact</th></tr>
+<tr><td>4</td><td>8.7%</td><td>8%</td><td>-0.7</td></tr>
+<tr><td>8</td><td>17.4%</td><td>16%</td><td>-1.4</td></tr>
+<tr><td>9</td><td>19.6%</td><td>18%</td><td>-1.6</td></tr>
+<tr><td>12</td><td>26.1%</td><td>24%</td><td>-2.1</td></tr>
+<tr><td>15</td><td>32.6%</td><td>30%</td><td>-2.6</td></tr>
+<tr><td>20</td><td>43.5%</td><td>40%</td><td>-3.5</td></tr>
+</table>
+<p>The rule of 2 never overstates here. It understates for all 20 out counts, by between 0.2 and 3.5 percentage points. A flush draw on the turn is 19.6 percent, and the rule says 18. Treat the rule of 2 as a slightly cautious estimate.</p>
+<h2>One more thing: the next card</h2>
+<p>The chance that the very next card is an out is outs over 47 on the flop. Nine outs give 19.1 percent for the next card alone, against 35.0 percent by the river. If you will have to pay again to see the river, the next-card figure is the fair comparison for the first call.</p>
+<h2>What this does not tell you</h2>
+<ul>
+<li>Outs are counted as clean: each out gives the winning hand, and none is shared with a better hand.</li>
+<li>Pot odds compare equity with the price of one call. They do not include what happens on later streets.</li>
+</ul>
+<p>Both tables are small: 12 bet sizes and 40 rows of outs. They are free to reuse under CC BY 4.0, with a script that rebuilds them from the formulas.</p>
+<p>The full data and method: <a href="https://georgelipoker.com/pot-odds">https://georgelipoker.com/pot-odds</a></p>
+
+</main></body></html>
